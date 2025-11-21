@@ -50,7 +50,6 @@ const Index = () => {
           <p>
             Click any button above to connect with our community.
             <br />
-            Remember to replace the URLs with your actual links!
           </p>
         </div>
       </div>
