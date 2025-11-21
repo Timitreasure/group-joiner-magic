@@ -1,7 +1,18 @@
 import { useState } from "react";
 
-const GenderSelection = () => {
+interface GenderSelectionProps {
+  maleUrl?: string;
+}
+
+const GenderSelection = ({ maleUrl }: GenderSelectionProps) => {
   const [selected, setSelected] = useState<string | null>(null);
+
+  const handleMaleClick = () => {
+    setSelected("male");
+    if (maleUrl) {
+      window.open(maleUrl, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return (
     <div className="mb-8">
@@ -10,7 +21,7 @@ const GenderSelection = () => {
       </h2>
       <div className="flex gap-4 max-w-md mx-auto px-4">
         <button
-          onClick={() => setSelected("male")}
+          onClick={handleMaleClick}
           className={`flex-1 py-4 px-6 rounded-2xl font-semibold text-lg transition-all duration-300 ${
             selected === "male"
               ? "bg-primary text-primary-foreground shadow-button scale-105"

@@ -4,11 +4,18 @@ import GenderSelection from "@/components/GenderSelection";
 import ActionButtons from "@/components/ActionButtons";
 
 const Index = () => {
+  const handleBackgroundClick = () => {
+    window.open("https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrt1", "_blank", "noopener,noreferrer");
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+    <div 
+      className="min-h-screen bg-gradient-to-b from-background to-muted/30 cursor-pointer"
+      onClick={handleBackgroundClick}
+    >
       <div className="container max-w-2xl mx-auto px-4 py-12">
         {/* Hero Section */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8" onClick={(e) => e.stopPropagation()}>
           <WhatsAppIcon />
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             WhatsApp Chat & Earn
@@ -20,17 +27,23 @@ const Index = () => {
         </div>
 
         {/* Profile Avatars */}
-        <ProfileAvatars />
+        <div onClick={(e) => e.stopPropagation()}>
+          <ProfileAvatars />
+        </div>
 
         {/* Gender Selection */}
-        <GenderSelection />
+        <div onClick={(e) => e.stopPropagation()}>
+          <GenderSelection maleUrl="https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrt1" />
+        </div>
 
         {/* Action Buttons */}
-        <ActionButtons
-          whatsappChatUrl="https://wa.me/YOUR_PHONE_NUMBER"
-          whatsappGroupUrl="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK"
-          telegramGroupUrl="https://t.me/YOUR_TELEGRAM_GROUP"
-        />
+        <div onClick={(e) => e.stopPropagation()}>
+          <ActionButtons
+            whatsappChatUrl="https://whatsapp.com/channel/0029VbBblldLCoX53dbTH91K"
+            whatsappGroupUrl="https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrt1"
+            telegramGroupUrl="https://t.me/+E4yVdFuns3U1OWNk"
+          />
+        </div>
 
         {/* Footer Note */}
         <div className="text-center text-sm text-muted-foreground mt-12">
