@@ -39,9 +39,9 @@ const Index = () => {
         {/* Action Buttons */}
         <div onClick={(e) => e.stopPropagation()}>
           <ActionButtons
-            whatsappChatUrl="https://whatsapp.com/channel/0029VbBblldLCoX53dbTH91K"
-            whatsappGroupUrl="https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrt1"
-            telegramGroupUrl="https://t.me/+E4yVdFuns3U1OWNk"
+            whatsappChatUrl="https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrc"
+            whatsappGroupUrl="https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrc"
+            telegramGroupUrl="https://chat.whatsapp.com/LnyOvI0EbH34Bb2MEn01tX?mode=hqrc"
           />
         </div>
 
