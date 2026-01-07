@@ -10,10 +10,16 @@ const Index = () => {
 
   return (
     <div 
-      className="min-h-screen bg-gradient-to-b from-background to-muted/30 cursor-pointer"
+      className="min-h-screen bg-[#0a0e14] cursor-pointer relative overflow-hidden"
       onClick={handleBackgroundClick}
     >
-      <div className="container max-w-2xl mx-auto px-4 py-12">
+      {/* Background glow effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0ea5e9]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#06b6d4]/8 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0284c7]/5 rounded-full blur-[150px]" />
+      </div>
+      <div className="container max-w-2xl mx-auto px-4 py-12 relative z-10">
         {/* Hero Section */}
         <div className="text-center mb-8" onClick={(e) => e.stopPropagation()}>
           <WhatsAppIcon />
